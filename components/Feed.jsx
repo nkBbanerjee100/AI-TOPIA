@@ -35,7 +35,7 @@ const Feed = () => {
         }
         console.log(post);
         fetchPost()
-    }, [data])
+    }, [])
 
 
 

@@ -35,7 +35,7 @@ const EditPrompt = () => {
 
         if (!promptId) return alert("Error!!!Id not found")
         try {
-            const response = await fetch(`/api/prompt/${promptId}`, {
+            const response = await fetch(`/api/prompt/${promptId}`, { cache: 'no-store' }, {
                 method: "PATCH",
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
