@@ -28,7 +28,7 @@ const Feed = () => {
     }
     useEffect(() => {
         const fetchPost = async () => {
-            const response = await fetch(`/api/prompt`)
+            const response = await fetch(`/api/prompt`, { cache: 'no-store' })
             const data = await response.json();
             setPost(data)
             setMainPost(data)
