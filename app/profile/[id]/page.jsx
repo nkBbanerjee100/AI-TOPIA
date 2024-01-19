@@ -15,10 +15,10 @@ const UserProfile = ({ params }) => {
     useEffect(() => {
         const fetchPosts = async () => {
             const response = await fetch(`/api/users/${params?.id}/userposts`,
-                {
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ firstName })
-                });
+                // {
+                //     headers: { 'Content-Type': 'application/json' },
+                //     body: JSON.stringify({ userName })
+            );
             const data = await response.json();
             console.log(params?.id);
             setUserPosts(data);

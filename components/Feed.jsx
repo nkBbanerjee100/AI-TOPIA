@@ -24,7 +24,7 @@ const Feed = () => {
     const [mainPost, setMainPost] = useState([])
     const changingFunc = (e) => {
         setSearchText(e.target.value);
-        setPost(mainPost.filter((ele) => ele.tag.toLowerCase().includes(e.target.value.toLowerCase)))
+        setPost(mainPost.filter((ele) => ele.tag.toLowerCase().includes(e.target.value.toLowerCase())))
     }
     useEffect(() => {
         const fetchPost = async () => {
